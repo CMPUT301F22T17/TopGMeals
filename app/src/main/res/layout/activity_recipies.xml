@@ -29,7 +29,7 @@
     <ListView
         android:id="@+id/recipeListView"
         android:layout_width="wrap_content"
-        android:layout_height="453dp"/>
+        android:layout_height="583dp" />
 
     <include
         android:id="@+id/include"

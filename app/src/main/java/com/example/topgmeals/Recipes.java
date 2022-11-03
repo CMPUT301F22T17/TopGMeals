@@ -38,18 +38,8 @@ public class Recipes extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(currentClass, RecipeDisplay.class);
-                String title = recipeBook.get(i).getRecipe_title();
-                String prep_time = recipeBook.get(i).getPrep_time();
-                String servings = recipeBook.get(i).getServing_count();
-                String category = recipeBook.get(i).getCategory();
-                String comments = recipeBook.get(i).getComments();
-
-                intent.putExtra("TITLE",title);
-                intent.putExtra("PREP_TIME",prep_time);
-                intent.putExtra("SERVINGS",servings);
-                intent.putExtra("CATEGORY",category);
-                intent.putExtra("COMMENTS",comments);
-
+                IndividualRecipe recipe_object = recipeBook.get(i);
+                intent.putExtra("OBJECT", recipe_object);
                 startActivity(intent);
             }
         });

@@ -30,9 +30,9 @@ public class RecipeListAdapter extends ArrayAdapter<IndividualRecipe> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         String title = getItem(position).getRecipe_title();
-        String prep_time = getItem(position).getPrep_time();
-        String servings = getItem(position).getServing_count();
-        String category = getItem(position).getCategory();
+        String prep_time = "Prep time\n" + getItem(position).getPrep_time();
+        String servings = "Servings\n" + getItem(position).getServing_count();
+        String category = "Category\n" + getItem(position).getCategory();
 
         LayoutInflater inflater = LayoutInflater.from(context);
         convertView = inflater.inflate(resource,parent,false);

@@ -1,6 +1,8 @@
 package com.example.topgmeals;
 
-public class IndividualRecipe {
+import java.io.Serializable;
+
+public class IndividualRecipe implements Serializable {
 
     private String recipe_title;
     private String prep_time;
