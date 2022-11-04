@@ -18,6 +18,7 @@ public class RecipeDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
+<<<<<<< Updated upstream
         IndividualRecipe recipe_object = (IndividualRecipe) intent.getSerializableExtra("OBJECT");
         setContentView(R.layout.activity_recipe_view);
         Button edit_recipe = (Button) findViewById(R.id.edit_recipe_button);
@@ -48,6 +49,38 @@ public class RecipeDisplay extends AppCompatActivity {
         comments_text.setText(comments);
 
         edit_recipe.setOnClickListener(new View.OnClickListener() {
+=======
+        Recipe recipe_object = (Recipe) intent.getSerializableExtra("OBJECT");
+
+        int position = intent.getIntExtra("POSITION",-1);
+
+        title.setText(recipe_object.getTitle());
+        prepTime.setText(recipe_object.getPrepTime());
+        servings.setText(recipe_object.getServings().toString()); // Not displaying right servings value
+        category.setText(recipe_object.getCategory());
+        comments.setText(recipe_object.getComments());
+
+        Button edit_recipe = (Button) findViewById(R.id.edit_recipe_button);
+        edit_recipe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recipe_object.setTitle(title.getText().toString());
+                recipe_object.setPrepTime(prepTime.getText().toString());
+                recipe_object.setServings(Integer.valueOf(servings.getText().toString()));
+                recipe_object.setCategory(category.getText().toString());
+                recipe_object.setComments(comments.getText().toString());
+
+                Intent intent = new Intent();
+                intent.putExtra("POSITION", position);
+                intent.putExtra("UPDATED OBJECT",recipe_object);
+                setResult(3,intent);
+                finish();
+            }
+        });
+
+        Button ingredients = (Button) findViewById(R.id.ingredients_button);
+        ingredients.setOnClickListener(new View.OnClickListener() {
+>>>>>>> Stashed changes
             @Override
             public void onClick(View view) {
                 String new_title = title_text.getText().toString();
@@ -73,6 +106,15 @@ public class RecipeDisplay extends AppCompatActivity {
         delete_recipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< Updated upstream
+=======
+                Intent intent = new Intent();
+                intent.putExtra("POSITION", position);
+                setResult(2,intent);
+                finish();
+            }
+        });
+>>>>>>> Stashed changes
 
             }
         });
