@@ -14,6 +14,7 @@
         android:theme="@style/Theme.TopGMeals"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".IngredientsDisplay"
             android:exported="false" />
         <activity
@@ -28,6 +29,14 @@
         <activity
             android:name=".AddIngredientRecipe"
             android:exported="false" />
+=======
+            android:name=".addEditRecipe"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
         <activity
             android:name=".RecipeDisplay"
             android:exported="false">

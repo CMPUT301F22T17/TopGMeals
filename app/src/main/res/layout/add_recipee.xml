@@ -222,16 +222,27 @@
 
    </LinearLayout>
 
+<<<<<<< HEAD
     <Button
         android:id="@+id/add_recipe"
+=======
+    <LinearLayout
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:text="Add Recipee"
-        android:textAlignment="center">
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="Add Recipee"
+            android:textAlignment="center"
+            android:id="@+id/add_new">
 
-    </Button>
+        </Button>
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

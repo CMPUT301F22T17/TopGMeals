@@ -43,6 +43,7 @@ public class RecipeBook extends AppCompatActivity  {
         RecipeBook currentClass = RecipeBook.this;
 
 
+<<<<<<< HEAD
         ActivityResultLauncher<Intent> viewRecipe = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
@@ -58,6 +59,9 @@ public class RecipeBook extends AppCompatActivity  {
 
         );
 
+=======
+
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
 
         recipeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -65,6 +69,10 @@ public class RecipeBook extends AppCompatActivity  {
                 //Intent new_intent=getIntent();
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
                 Intent intent = new Intent(currentClass, RecipeDisplay.class);
                 String title = recipeBook.get(i).getTitle();
                 String prep_time = recipeBook.get(i).getPrepTime();
@@ -119,15 +127,37 @@ public class RecipeBook extends AppCompatActivity  {
             }
         });
 
+<<<<<<< HEAD
         Button add_recipe=(Button) findViewById(R.id.AddRecipe);
+=======
+        Button add_recipe=(Button) findViewById(R.id.add_button);
 
         add_recipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(currentClass, AddRecipe.class);
+                Intent intent = new Intent(currentClass, addEditRecipe.class);
                 startActivity(intent);
             }
         });
+
+        Button RecipiesButton = (Button) findViewById(R.id.switchToRecipes);
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
+
+        add_recipe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+<<<<<<< HEAD
+                Intent intent = new Intent(currentClass, AddRecipe.class);
+=======
+                Intent intent = new Intent(currentClass, RecipeBook.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                check=Boolean.TRUE;
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
+                startActivity(intent);
+
+            }
+        });
+<<<<<<< HEAD
 
         Button RecipesButton = (Button) findViewById(R.id.switchToRecipes);
 
@@ -150,6 +180,12 @@ public class RecipeBook extends AppCompatActivity  {
         if (new_recipe!=null){
             recipeBook.add(new_recipe);
 
+=======
+        System.out.println(check);
+        Recipe new_recipe=(Recipe) getIntent().getSerializableExtra("NEW");
+        if (new_recipe!=null){
+            recipeBook.add(new_recipe);
+>>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
         }
         //endregion
 
