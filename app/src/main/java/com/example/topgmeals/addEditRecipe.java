@@ -20,11 +20,11 @@ public class addEditRecipe extends AppCompatActivity {
 
 
 
-<<<<<<< HEAD
+
         Button add_new=findViewById(R.id.add_recipe);
-=======
-        Button add_new=findViewById(R.id.add_new);
->>>>>>> 9fa0be008b0f77ce5012e4ae2af7daa3f9ec5265
+
+        
+
         add_new.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
