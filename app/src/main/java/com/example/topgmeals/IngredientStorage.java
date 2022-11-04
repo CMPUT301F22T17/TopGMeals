@@ -107,7 +107,7 @@ public class IngredientStorage extends AppCompatActivity {
 
         View.OnClickListener onItemClickListener = view -> {
             RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
-            int pos = viewHolder.getAbsoluteAdapterPosition();
+            int pos = viewHolder.getAdapterPosition();
             Ingredient ingredient = ingredientList.get(pos);
 
             Intent intent = new Intent(getBaseContext(), AddEditIngredientActivity.class);
