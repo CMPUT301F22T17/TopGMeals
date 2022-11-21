@@ -27,6 +27,14 @@ import com.google.firebase.storage.StorageReference;
 import java.util.HashMap;
 import java.util.Map;
 
+//TODO:
+//1- Change Recipe UI's
+//2- Fix recipe errors
+//3- Add javadocs to recipe classes
+//4- Testing cases for recipe
+//5- Input Validation for IngredientRecipe class
+
+
 /**
  * This class is an Activity that handles the Recipe Display menu. The user will be able to see
  * the information of each recipe, and edit and delete a recipe
