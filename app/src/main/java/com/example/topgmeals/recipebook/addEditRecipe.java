@@ -82,6 +82,12 @@ public class addEditRecipe extends AppCompatActivity {
                     prep_time.requestFocus();
                     return;
                 }
+                if (prep_time_text.compareTo("0")==0){
+                    prep_time.setError("Preparation Time Cannot be 0");
+                    prep_time.requestFocus();
+                    return;
+                }
+
 
                 if (serving_text.isEmpty()  ) {
                     serving.setError("Servings is required!");
