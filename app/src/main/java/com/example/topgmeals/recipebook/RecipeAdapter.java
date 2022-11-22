@@ -52,7 +52,7 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
 
         String title = getItem(position).getTitle();
         String prep_time = getItem(position).getPrepTime();
-        Integer servings = getItem(position).getServings();
+        String servings = getItem(position).getServings();
         String category = getItem(position).getCategory();
         String recID = getItem(position).getDocumentID();
 

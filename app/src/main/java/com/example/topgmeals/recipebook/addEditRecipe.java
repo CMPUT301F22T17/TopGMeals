@@ -66,9 +66,40 @@ public class addEditRecipe extends AppCompatActivity {
 
                 String title_text = title.getText().toString();
                 String prep_time_text = prep_time.getText().toString();
-                Integer serving_text = Integer.parseInt(serving.getText().toString());
+                String serving_text = serving.getText().toString();
                 String category_text = category.getText().toString();
                 String comments_text = comments.getText().toString();
+
+
+                if (title_text.isEmpty()) {
+                    title.setError("Title is required!");
+                    title.requestFocus();
+                    return;
+                }
+
+                if (prep_time_text.isEmpty()) {
+                    prep_time.setError("Preparation time is required!");
+                    prep_time.requestFocus();
+                    return;
+                }
+
+                if (serving_text.isEmpty()) {
+                    serving.setError("Servings is required!");
+                    serving.requestFocus();
+                    return;
+                }
+
+                if (category_text.isEmpty()) {
+                    category.setError("Category is required!");
+                    category.requestFocus();
+                    return;
+                }
+
+                if (comments_text.isEmpty()) {
+                    comments.setError("Comments is required!");
+                    comments.requestFocus();
+                    return;
+                }
 
 
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
