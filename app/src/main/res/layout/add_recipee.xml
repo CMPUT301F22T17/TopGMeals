@@ -82,7 +82,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:hint="Serving "
             android:textAlignment="center"
             android:id="@+id/serving_editText">

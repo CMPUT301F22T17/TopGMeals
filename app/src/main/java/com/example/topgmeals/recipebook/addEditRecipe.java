@@ -83,8 +83,14 @@ public class addEditRecipe extends AppCompatActivity {
                     return;
                 }
 
-                if (serving_text.isEmpty()) {
+                if (serving_text.isEmpty()  ) {
                     serving.setError("Servings is required!");
+                    serving.requestFocus();
+                    return;
+                }
+
+                if (serving_text.compareTo("0")==0){
+                    serving.setError("Servings Cannot be 0");
                     serving.requestFocus();
                     return;
                 }
